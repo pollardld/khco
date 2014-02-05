@@ -1,0 +1,91 @@
+header {
+	position: relative;
+}
+
+nav {
+
+	ul {
+		
+		li {
+			vertical-align: middle;
+	
+			a {
+				font-size: .4rem;
+				padding: .4rem;
+				margin: 1.5rem 0;
+			}
+			
+			&.logo {
+				width: 30%;
+				margin: .5rem 0 0;
+			}
+		}
+	}
+
+	#coverageNav {
+
+		a {
+			margin: .75rem 0;
+		}
+		
+		.subnav {
+			margin-top: -3rem;
+
+			li {
+
+				&:first-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+main {
+	font-size: .5em;
+}
+
+.page {
+
+	main {
+		padding-top: 0;
+	}
+}
+
+.map {
+	height: 100px;
+
+	.cta-link {
+		top: 50px;
+	}
+
+	&.events-map {
+		min-height: 7rem;
+		height: 50vh;
+
+		#map {
+			top: 0;
+		}
+
+		.map-legend {
+			height: 50%;
+			height: 50vh;
+			top: 0;
+
+			section {
+				font-size: .675rem;
+				padding: .5rem 5%;
+			}
+		}
+	}
+
+	.leaflet-bar a {
+		height: 16px;
+		line-height: 16px;
+		width: 16px;
+	}
+
+	.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+		font: normal 16px 'Lucida Console', Monaco, monospace;
+	}
+}

@@ -1,0 +1,131 @@
+nav {
+
+	ul {
+		
+		li {
+			vertical-align: top;
+			width: 14%;
+	
+			a {
+				font-size: .7em;
+				padding: 2em 1.3125em;
+			}
+			
+			&.logo {
+				margin: 2.35em 0 0;
+			}
+			
+			&#sliding-brdr { 
+				visibility: visible;
+			}
+
+			
+		}
+		
+	}
+
+	#coverageNav {
+		
+		.subnav {
+			margin-top: -5.35em;
+		}
+	}
+}
+
+main {
+	font-size: .75em;
+
+	h2 {
+		font-size: 1.75em;
+	}
+}
+
+#about-cta {
+	background-position: center 3rem;
+	background-size: cover;
+	min-height: 45rem;
+
+	article {
+		display: block;
+		padding: 2.5em 12% 2.5em;
+		position: fixed;
+		top: 26%;
+	}
+}
+
+.coverage-cta {
+
+	h3 {
+		font-size: 1.5em;
+	}
+
+	p {
+		line-height: 1.75em;
+	}
+
+	.img-wrap {
+
+		img{
+			width: 100%;
+		}
+	}
+}
+
+/*  ==============================
+	Map
+==============================  */
+
+.map {
+	height: 400px;
+
+	&.events-map {
+
+		#map {
+			top: 108px;
+		}
+
+		.map-legend {
+			top: 108px;
+
+			section {
+				font-size: .8125rem;
+			}
+		}
+	}
+}
+
+/*  ==============================
+	Pages
+==============================  */
+
+.page {
+
+	main {
+		padding-top: 108px;
+	}
+
+	h2 {
+		font-size: 1.125rem;
+		line-height: 1.5rem;
+		margin-bottom: 0;
+		padding: 2em 12% 2em;
+		top: 8rem;
+		position: fixed;
+	}
+	
+	.page-content {
+		margin-top: 14rem;
+	}
+
+	img.attachment-featured-img {
+		position: fixed;
+	}
+}
+
+/*  ==============================
+	Footer
+==============================  */
+
+footer {
+	font-size: .8em;
+}

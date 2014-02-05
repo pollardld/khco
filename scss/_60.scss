@@ -1,0 +1,69 @@
+nav {
+
+	ul {
+		
+		li {
+			
+			a {
+				font-size: .8em;
+				padding: 2em 3.5em;
+			}
+
+			&.logo {
+				width: 14em;
+				margin: 2em 1em 0;
+			}
+			
+		}
+		
+	}
+
+}
+
+/*  ==============================
+	Home Page
+==============================  */
+
+#about-cta {
+	background-attachment: fixed;
+	background-size: cover;
+	height: 90vh;
+	min-height: 30rem;
+}
+
+/*  ==============================
+	Map
+==============================  */
+
+.map {
+	height: 450px;
+
+	&.events-map {
+
+		.map-legend {
+
+			section {
+				padding: 1rem 5% 1rem 20%;
+				width: 70%;
+			}
+
+		}
+	} 
+}
+
+/*  ==============================
+	Popup Content
+==============================  */
+
+.leaflet-left {
+  right: auto; 
+}
+
+.leaflet-control {
+  float: left;
+  margin-right: 0px;
+}
+
+.leaflet-popup {
+	max-width: 20rem;
+}
