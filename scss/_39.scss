@@ -21,13 +21,8 @@ nav {
 	}
 
 	#coverageNav {
-
-		a {
-			color: white;
-		}
 		
 		.subnav {
-			display: none;
 			
 			li {
 				display: inline-block;
@@ -65,17 +60,6 @@ main {
 }
 
 /*  ==============================
-	Page
-==============================  */
-
-.page {
-
-	h2 {
-		top: 10rem;
-	}
-}
-
-/*  ==============================
 	Map
 ==============================  */
 
@@ -83,13 +67,8 @@ main {
 
 	&.events-map {
 
-		#map {
-			top: 123px;
-		}
-
 		.map-legend {
-			height: 78vh;
-			top: 123px;
+			height: 93vh;
 
 			section:nth-of-type(1n) {
 				font-size: .9125rem;
@@ -115,7 +94,13 @@ main {
 }
 
 .leaflet-popup {
+	margin-left: 0;
 	max-width: 15rem;
+
+
+	.leaflet-popup-tip {
+		display: block;
+	}
 }
 
 /*  ==============================
@@ -131,10 +116,33 @@ main {
 	h2 {
 		font-size: 1.5rem;
 		line-height: 2.25rem;
+		top: 10rem;
 	}
 
 	.page-content {
 		margin-top: 18rem;
+	}
+
+	&.page-id-11 {
+
+		.page-content {
+			margin-top: 0;
+
+			p {
+				font-size: 1.25em;
+				line-height: 1.5em;
+			}
+	
+		}
+
+	}
+
+	&.page-template-partner-php {
+		
+		.page-content {
+			margin-top: 0;
+		}
+
 	}
 }
 
@@ -162,11 +170,13 @@ main {
 
 .wpcf7-form {
 
+	margin-top: 2em;
+
 	p {
 		width: 47.5%;
 
 		&:nth-of-type(2n+1) {
-			margin: 0 5% 1.5rem -4px;
+			margin: 0 5% 1.5rem 0;
 		}
 
 		&:nth-of-type(3) {

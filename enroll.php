@@ -4,24 +4,31 @@ Template Name: Enroll
 */
 get_header(); ?>
 
-<div class="container">
-	<?php while ( have_posts() ) : the_post(); ?>
-    <?php the_content(); ?>
-    <?php endwhile; ?>
-</div>
+<main>
+	<div class="page-content map-page">
 
-<div class="map-wrapper">
+		<div class="container">
+			<?php while ( have_posts() ) : the_post(); ?>
+		    <?php the_content(); ?>
+		    <?php endwhile; ?>
+		</div>
 
-    <div class="map events-map">
-    	<article class="map-legend" id="map-legend">
+	</div>
 
-    	</article>
+	<div class="map-wrapper">
 
-        <div id="map"></div>
-    </div>
+	    <div class="map events-map">
 
-    <span id="mapAll"></span>
-    
-</div>
+	    	<article class="map-legend" id="map-legend">
+
+	    	</article>
+
+	        <div id="map"></div>
+	    
+	    </div>
+
+	</div>
+
+</main>
 
 <?php get_footer(); ?>

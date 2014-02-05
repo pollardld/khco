@@ -14,6 +14,7 @@ body {
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 4em 0;
+	overflow: hidden;
 }
 
 /************************************
@@ -22,6 +23,12 @@ LINK STYLES
 a {
 	text-decoration: none;
 	@include vendor-prefix (transition, $mainTransition);
+	color: $primaryColor;
+
+	&:hover {
+		color: $secondaryColor;
+	}
+
 }
 
 /************************************
@@ -73,6 +80,11 @@ nav {
 				margin: 2em 0;
 				padding: 1em .25em;
 				vertical-align: top;
+
+				&:hover {
+					color: $white;
+				}
+
 			}
 			
 			&.logo {
@@ -111,14 +123,10 @@ nav {
 	}
 	
 	#coverageNav {
-
-		a {
-			color: $primaryColor;
-		}
 		
 		.subnav {
-			display: block;
-			margin-top: -4em;
+			display: none;
+			margin-top: -3.9em;
 			@include vendor-prefix (transition, $mainTransition);
 
 			
@@ -131,7 +139,7 @@ nav {
 			}
 			
 			a {
-				color: white;
+				color: $primaryColor;
 				padding: 1.5em .25em;
 				display: block;
 				margin: 0;
@@ -179,7 +187,9 @@ main {
 		text-align: justify;
 		
 		span {
-			font-size: .75em;
+			font-size: .6em;
+			font-family: $sans-serif;
+			font-weight: 300;
 			line-height: 1.5em;
 			margin-top: .5em;
 			display: block;
@@ -189,6 +199,7 @@ main {
 
 #about-cta {
 	background-image: url(../img/img-FPO.jpg);
+	background-attachment: fixed;
 	background-size: auto 120%;
 	height: 30rem;
 	text-align: center;
@@ -208,6 +219,11 @@ main {
 .cta-link {
 	position: relative;
 	bottom: -3.5em;
+
+	&:hover {
+		color: $white;		
+	}
+
 }
 
 .coverage-cta-wrap {
@@ -295,6 +311,28 @@ main {
 	background: $primaryColor;
 }
 
+.map-info {
+	position: relative;
+	background: rgba($baseColor, .7);
+	padding: 2.5em 12% 2.5em;
+	top: 2em;
+	z-index: 8;
+	color: $white;
+
+	h3 {
+		font-size: 2em;
+		margin: 0;
+	}
+
+	p {
+		font-weight: 300;
+		font-size: .9em;
+		line-height: 1.5em;
+		margin-top: 0;
+	}
+
+}
+
 .map {
 	height: 300px;
 	position: relative;
@@ -303,14 +341,13 @@ main {
 
 	.cta-link {
 		position: absolute;
-		top: 150px;
 		text-align: center;
 		z-index: 9;
 		background: $baseColor;
-		bottom: 10em;
+		bottom: -2em;
 		left: 0;
 		right: 0;
-		width: 100px;
+		width: 275px;
 		display: inline-table;
 		&:hover {
 			background: $white;
@@ -335,7 +372,6 @@ main {
 		height: 88vh;
 
 		#map {
-			top: 74px;
 		}
 		
 		.map-legend {
@@ -344,7 +380,6 @@ main {
 			height: 85vh;
 			overflow: scroll;
 			position: absolute;
-			top: 74px;
 			width: 30%;
 			z-index: 6;
 
@@ -399,17 +434,36 @@ main {
 	}
 }
 
-.leaflet-left {
-  right: 0; 
+.leaflet-control-container {
+
+	.leaflet-left {
+  		right: 0; 
+	}
+
+	.leaflet-control {
+  		float: right;
+  		margin-right: 10px;
+	}
 }
 
-.leaflet-control {
-  float: right;
-  margin-right: 10px;
+.home-map {
+
+	.leaflet-control {
+		display: none;
+	}
+
+	.leaflet-popup {
+		display: none;
+	}
 }
 
 .leaflet-popup {
+	margin-left: 2rem;
 	max-width: 7.5rem;
+
+	.leaflet-popup-tip {
+		display: none;
+	}
 }
 
 /*  ==============================
@@ -462,6 +516,38 @@ main {
 		width: 100%;
 		height: auto;
 		z-index: 1;
+	}
+}
+
+.left-col {
+	width: 70%;
+	display: inline-block;
+	float: left;
+	@include clear-fix();
+}
+
+.sidebar {
+	width: 25%;
+	margin-left: 4.5%;
+	display: inline-block;
+	float: right;
+	font-size: .9em;
+	border-top: 4px solid $baseColor;
+	padding-top: 2em;
+
+	h3 {
+		margin-top: 0;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			padding: 0 0 .75em;
+		}
+	
 	}
 }
 

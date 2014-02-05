@@ -1,20 +1,13 @@
 //========== Mapbox
 var map = L.mapbox.map('map', 'melaniehall.map-ygz05pk4')
-    .setView([28, -82.52], 10);
+    .setView([27.875, -82.52], 11);
     
 map.scrollWheelZoom.disable();
-
-// Map View All Button
-var mapAll = document.getElementById('mapAll');
 
 // Pan and hide view all button on marker click
 map.markerLayer.on('click', function(e) {
     
     map.panTo(e.layer.getLatLng());
-    
-    if( !(mapAll.classList.contains('index')) ) {
-        mapAll.classList.add('index');
-    }
 
     var i = e.layer.getLatLng();
     popupLink(i);
